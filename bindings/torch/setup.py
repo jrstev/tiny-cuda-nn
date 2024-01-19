@@ -61,7 +61,7 @@ if os.name == "nt":
 		import glob
 		for executable in ["Program Files (x86)", "Program Files"]:
 			for edition in ["Enterprise", "Professional", "BuildTools", "Community"]:
-				inp = input("Runtime path")
+				inp = input("Runtime path: ")
 				if(inp):
 					paths = sorted(glob.glob(inp), reverse=True)
 				else:
