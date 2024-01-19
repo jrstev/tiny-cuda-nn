@@ -61,12 +61,7 @@ if os.name == "nt":
 		import glob
 		for executable in ["Program Files (x86)", "Program Files"]:
 			for edition in ["Enterprise", "Professional", "BuildTools", "Community"]:
-				inp = input("Runtime path: ")
-				if(inp):
-					paths = sorted(glob.glob(inp), reverse=True)
-				else:
-					paths = sorted(glob.glob(f"C:\\{executable}\\Microsoft Visual Studio\\*\\{edition}\\VC\\Tools\\MSVC\\*\\bin\\Hostx64\\x64"), reverse=True)
-				
+				paths = sorted(glob.glob(f"G:\\ProgramFiles\\VisualStudio\\ide\\VC\\Tools\\MSVC\\*\\bin\\Hostx64\\x64"), reverse=True)
 				if paths:
 					return paths[0]
 
